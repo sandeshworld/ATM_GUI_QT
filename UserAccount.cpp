@@ -51,8 +51,8 @@ int UserAccount::depositMoney(int amount) {
 
 // withdraw money
 int UserAccount::withdrawMoney(int amount) {
-    if (this->loggedIn == false) {
-        this->balance += amount;
+    if (this->loggedIn == true) {
+        this->balance -= amount;
         return this->balance;
     }
 }

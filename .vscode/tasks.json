@@ -7,7 +7,9 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${file}",
+                "${workspaceFolder}/Person.cpp",
+                "${workspaceFolder}/UserAccount.cpp",
+                "${workspaceFolder}/helloworld.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
@@ -26,7 +28,9 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-g",
-                "${file}",
+                "${workspaceFolder}/Person.cpp",
+                "${workspaceFolder}/UserAccount.cpp",
+                "${workspaceFolder}/helloworld.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

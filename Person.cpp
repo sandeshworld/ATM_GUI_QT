@@ -10,42 +10,33 @@
 using std::string;
 
 /*class that defines a person, a person can open a bank account. bank account inherits from person*/
-class Person {
-    public:
-        string firstName;
-        string lastName;
 
-        string * getName() {
-            string * name = new string[2];
-            name[0] = firstName;
-            name[1] = lastName;
-            return name;
-        }
+string * Person::getName() {
+    string * name = new string[2];
+    name[0] = firstName;
+    name[1] = lastName;
+    return name;
+}
 
-    protected:
-        dateOfBirth birthDate;
-        string address;
+void Person::setName(string first, string last) {
+    firstName = first;
+    lastName = last;
+}
 
-        void setName(string first, string last) {
-            firstName = first;
-            lastName = last;
-        }
+void Person::setAddress(string address) {
+    this->address = address; // playing around with different way to access class variable, this is pointer
+}
 
-        void setAddress(string address) {
-            this->address = address; // playing around with different way to access class variable, this is pointer
-        }
+string Person::getAddress() {
+    return address;
+}
 
-        string getAddress() {
-            return address;
-        }
+void Person::setBirthDate(int month, int day, int year) {
+    birthDate.month = month;
+    birthDate.day = day;
+    birthDate.year = year;
+}
 
-        void setBirthDate(int month, int day, int year) {
-            birthDate.month = month;
-            birthDate.day = day;
-            birthDate.year = year;
-        }
-
-        dateOfBirth getBirthDate() {
-            return birthDate;
-        }
+dateOfBirth Person::getBirthDate() {
+    return birthDate;
 }
